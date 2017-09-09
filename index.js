@@ -19,6 +19,16 @@ restService.post('/echo', function(req, res) {
         speech = "lekker draad";
     }
     // speech = 'yster';  // braam tries to over ride
+    
+    //next block is experiment
+    var speech = req.body.result && req.body.result.resolvedQuery ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
+    if (speech == "mysword"){
+       speech="swaard idee werk!!!";
+    } else if (speech == "draad"){
+        speech = "lekker draad";
+    }
+    
+    
     return res.json({
         speech: speech,
         displayText: speech,
