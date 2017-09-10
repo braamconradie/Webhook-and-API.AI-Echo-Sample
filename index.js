@@ -19,6 +19,7 @@ restService.post('/echo', function(req, res) {
         speech = "lekker draad";
     }
     
+	/*
     var dweetClient = require("node-dweetio");
     var dweetio = new dweetClient();
     var speech;
@@ -29,7 +30,7 @@ restService.post('/echo', function(req, res) {
 	//console.log(dweet.thing); // The generated name
     //console.log(dweet.content); // The content of the dweet
     //console.log(dweet.created); // The create date of the dweet
-
+   */
 	
 });
     
@@ -39,14 +40,14 @@ restService.post('/echo', function(req, res) {
     
     //next block is experiment
     
-    /*
+    
     var speech = req.body.result && req.body.result.resolvedQuery ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
     if (speech == "mysword"){
        speech="swaard idee werk!!!";
     } else if (speech == "draad"){
         speech = "lekker draad";
     }
-    */
+    
     
     return res.json({
         speech: speech,
