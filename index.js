@@ -18,16 +18,35 @@ restService.post('/echo', function(req, res) {
     } else if (speech == "draad"){
         speech = "lekker draad";
     }
+    
+    var dweetClient = require("node-dweetio");
+    var dweetio = new dweetClient();
+    var speech;
+    dweetio.get_latest_dweet_for("northvaletotalekrag", function(err, dweet){
+    var dweet = dweet[0]; // Dweet is always an array of 1
+    speech = dweet.content;
+	console.log(speech); // The generated name
+	//console.log(dweet.thing); // The generated name
+    //console.log(dweet.content); // The content of the dweet
+    //console.log(dweet.created); // The create date of the dweet
+
+	
+});
+    
+    
+    
     // speech = 'yster';  // braam tries to over ride
     
     //next block is experiment
+    
+    /*
     var speech = req.body.result && req.body.result.resolvedQuery ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
     if (speech == "mysword"){
        speech="swaard idee werk!!!";
     } else if (speech == "draad"){
         speech = "lekker draad";
     }
-    
+    */
     
     return res.json({
         speech: speech,
