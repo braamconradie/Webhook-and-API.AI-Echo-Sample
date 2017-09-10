@@ -13,8 +13,9 @@
   }
 }
 
-
-	"name": "node-dweetio",
+{
+	
+"name": "node-dweetio",
 	"version": "0.0.12",
 	"description": "A node.js client for dweet.io",
 	"main": "dweet.io.js",
@@ -50,10 +51,9 @@
 	}
 
 
+}
 
 
 
 
 
-
-{
