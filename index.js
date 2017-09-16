@@ -16,7 +16,13 @@ restService.use(bodyParser.json());
 restService.post('/echo', function(req, res) {
     var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
     
-// here we go trying again to dweet
+    //try if then again
+      if (speech == "horing"){
+       speech="lekker horing";
+    } else if (speech == "draad"){
+        speech = "lekker draad";
+    }
+    
 const request = require('request');
 request('https://dweet.io/dweet/for/braam666?hello=world', function (error, response, body) {
   console.log('error:', error); // Print the error if one occurred
