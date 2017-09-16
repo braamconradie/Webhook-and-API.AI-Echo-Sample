@@ -5,15 +5,7 @@ const bodyParser = require('body-parser');
 
 const restService = express();
 
-restService.use(bodyParser.urlencoded({
-    extended: true
-}));
 
-restService.use(bodyParser.json());
-
-restService.post('/echo', function(req, res) {
-    var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
-    
     //try to send dweet
     theUrl = 'https://dweet.io/dweet/for/innerbowel1?hello=jaekishier'
     function httpGet(theUrl)
@@ -24,6 +16,17 @@ restService.post('/echo', function(req, res) {
         return xmlHttp.responseText;
     }
     httpGet(theUrl);
+
+restService.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+restService.use(bodyParser.json());
+
+restService.post('/echo', function(req, res) {
+    var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
+    
+
     
         
     return res.json({
