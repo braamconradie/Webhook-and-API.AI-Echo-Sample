@@ -18,7 +18,7 @@ restService.post('/echo', function(req, res) {
     
     //try if then again
       if (speech == "horing"){
-        speech="lekker horing";
+        speech="lekkerrrr horing";
           
         /*
           request('https://dweet.io/dweet/for/braam666?hello=lekkerhoring', function (error, response, body) {
@@ -35,7 +35,7 @@ restService.post('/echo', function(req, res) {
 const request = require('request');
     
     
-var stuurdit = 'https://dweet.io/dweet/for/braam666?hello=stuurdit';
+var stuurdit = 'https://dweet.io/dweet/for/braam666?hello='.concat(speech);
 //request('https://dweet.io/dweet/for/braam666?hello=world', function (error, response, body) {
 
 request(stuurdit, function (error, response, body) {
