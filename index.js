@@ -18,16 +18,25 @@ restService.post('/echo', function(req, res) {
     
     //try if then again
       if (speech == "horing"){
-       speech="lekker horing";
-    } else if (speech == "draad"){
-        speech = "lekker draad";
-    }
+        speech="lekker horing"
+          
+        request('https://dweet.io/dweet/for/braam666?hello=lekkerhoring', function (error, response, body) {
+            console.log('error:', error); // Print the error if one occurred
+            console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+            console.log('body:', body); // Print the HTML for the Google homepage.
+            });
+            
+          
+         } else if (speech == "draad"){
+                     speech = "lekker draad";
+       }
     
 const request = require('request');
+
 request('https://dweet.io/dweet/for/braam666?hello=world', function (error, response, body) {
-  console.log('error:', error); // Print the error if one occurred
-  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-  console.log('body:', body); // Print the HTML for the Google homepage.
+   console.log('error:', error); // Print the error if one occurred
+   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+   console.log('body:', body); // Print the HTML for the Google homepage.
 });
     
         
