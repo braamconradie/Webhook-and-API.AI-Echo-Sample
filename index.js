@@ -33,6 +33,8 @@ restService.post('/echo', function(req, res) {
        }
     
 const request = require('request');
+    
+/*    
 stuurdit = 'https://dweet.io/dweet/for/braam666?hello=' + speech;
 
 // request('https://dweet.io/dweet/for/braam666?hello=world', function (error, response, body) {
@@ -41,7 +43,7 @@ request(stuurdit, function (error, response, body) {
    console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
    console.log('body:', body); // Print the HTML for the Google homepage.
 });
-    
+  */  
         
     return res.json({
         speech: speech,
