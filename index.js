@@ -17,8 +17,8 @@ restService.post('/echo', function(req, res) {
     var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
     
     //try if then again
-      if (speech == "horing"){
-        speech="lekkerrrr horing";
+      if (speech == "amanda1"){
+        speech="amanda1";
           
         /*
           request('https://dweet.io/dweet/for/braam666?hello=lekkerhoring', function (error, response, body) {
@@ -30,6 +30,9 @@ restService.post('/echo', function(req, res) {
           
          } else if (speech == "draad"){
                      speech = "lekker draad";
+             
+         } else if (speech == "lance1"){
+                     speech = "lance1";
        }
     
 const request = require('request');
