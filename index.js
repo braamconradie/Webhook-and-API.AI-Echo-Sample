@@ -2,20 +2,10 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const request = require('request');
 
 const restService = express();
 
-
-    //try to send dweet
-    theUrl = 'https://dweet.io/dweet/for/innerbowel1?hello=jaekishier'
-    function httpGet(theUrl)
-    {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", theUrl, false ); // false for synchronous request
-        xmlHttp.send( null );
-        return xmlHttp.responseText;
-    }
-    httpGet(theUrl);
 
 restService.use(bodyParser.urlencoded({
     extended: true
