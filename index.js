@@ -18,7 +18,7 @@ restService.post('/echo', function(req, res) {
     
     //try if then again
       if (speech == "horing"){
-        speech="lekker horing"
+        speech="lekker horing";
           
         request('https://dweet.io/dweet/for/braam666?hello=lekkerhoring', function (error, response, body) {
             console.log('error:', error); // Print the error if one occurred
