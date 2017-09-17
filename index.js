@@ -30,7 +30,7 @@ restService.post('/echo', function(req, res) {
           
          } else if (speech == "braampower"){
              speech = "well at least I got to before const req";
-             const request = require('request');
+             var request = require('request');
              speech = "well at least I got to after const req ";
              // get reading from dweet
         
