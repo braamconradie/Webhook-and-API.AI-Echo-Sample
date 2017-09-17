@@ -29,9 +29,9 @@ restService.post('/echo', function(req, res) {
         */    
           
          } else if (speech == "braampower"){
-             
+             speech = "well at least I got to here";
              // get reading from dweet
-
+        
                  request('https://dweet.io/get/latest/dweet/for/braamwatts', function (error, response, body) {
                       var myJSON = JSON.parse(body);
                       // console.log(myJSON);
