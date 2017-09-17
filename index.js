@@ -31,15 +31,16 @@ restService.post('/echo', function(req, res) {
          } else if (speech == "braampower"){
              
              // get reading from dweet
+
                  request('https://dweet.io/get/latest/dweet/for/braamwatts', function (error, response, body) {
-                     console.log ('**************');
-                     //console.log ('body is ' + body);
-                     var myJSON = JSON.parse(body);
-                     // console.log (myJSON);
-                     var tweedeobj = myJSON["with"];
-                     console.log(tweedeobj[0]["content"]["totalkrag"]);
-                     speech = tweedeobj[0]["content"]["totalkrag"].toString();
+                      var myJSON = JSON.parse(body);
+                      // console.log(myJSON);
+                      var tweedeobj = myJSON["with"];
+                      //console.log(tweedeobj[0]["content"]["totalkrag"]);
+                      speech = tweedeobj[0]["content"]["totalkrag"].toString();
+                      console.log(speech);
                   });
+             
 
          } else if (speech == "lancevid1"){
                      speech = "lancevid1";
