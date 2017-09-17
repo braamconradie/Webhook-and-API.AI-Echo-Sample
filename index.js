@@ -29,14 +29,18 @@ restService.post('/echo', function(req, res) {
         */    
           
          } else if (speech == "braampower"){
-             speech = "well at least I got to here";
+             speech = "well at least I got to before const req";
              const request = require('request');
+             speech = "well at least I got to after const req ";
              // get reading from dweet
         
                  request('https://dweet.io/get/latest/dweet/for/braamwatts', function (error, response, body) {
-                      var myJSON = JSON.parse(body);
+                     speech = "well at least I got into request loop "; 
+                     var myJSON = JSON.parse(body);
                       // console.log(myJSON);
+                     speech = "well at least I got into request loop line 1 "; 
                       var tweedeobj = myJSON["with"];
+                      speech = "well at least I got into request loop line 2 "; 
                       //console.log(tweedeobj[0]["content"]["totalkrag"]);
                       speech = tweedeobj[0]["content"]["totalkrag"].toString();
                       console.log(speech);
