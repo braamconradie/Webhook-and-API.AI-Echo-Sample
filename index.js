@@ -38,6 +38,7 @@ restService.post('/echo', function(req, res) {
                      // console.log (myJSON);
                      var tweedeobj = myJSON["with"];
                      console.log(tweedeobj[0]["content"]["totalkrag"]);
+                     speech = tweedeobj[0]["content"]["totalkrag"];
                   });
 
          } else if (speech == "lancevid1"){
