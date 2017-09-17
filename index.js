@@ -46,13 +46,7 @@ restService.post('/echo', function(req, res) {
                       console.log(speech);
                   });
              
-             //try 170917 8.10pm
-             suspend(function* () {
-    console.log('Welcome to My Console,');
-    yield setTimeout(suspend.resume(), 5000); // 5 seconds pass..
-    console.log('Blah blah blah blah extra-blah');
-})();
-             
+   
              
              
              
