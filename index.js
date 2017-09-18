@@ -34,6 +34,8 @@ restService.post('/echo', function(req, res) {
              speech = "well at least I got to after const req ";
              // get reading from dweet
         
+
+/*
                  request('https://dweet.io/get/latest/dweet/for/braamwatts', function (error, response, body) {
                      speech = "well at least I got into request loop "; 
                      var myJSON = JSON.parse(body);
@@ -45,8 +47,30 @@ restService.post('/echo', function(req, res) {
                       speech = tweedeobj[0]["content"]["totalkrag"].toString();
                       console.log(speech);
                   });
-             
+*/           
    
+                                                             var http = require('http');
+                                                var options = {
+                                                  host: 'dweet.io',
+                                                  path: '/get/latest/dweet/for/braamwatts'
+                                                };
+                                                callback = function(response) {
+                                                  var str = '';
+                                                  response.on('data', function (chunk) {
+                                                  str += chunk;
+                                                  });
+                                                  response.on('end', function () {
+
+                                                var myJSON = JSON.parse(str);
+                                                // console.log(myJSON);
+                                                  var tweedeobj = myJSON["with"];
+                                                  //console.log(tweedeobj[0]["content"]["totalkrag"]);
+                                                  speech = tweedeobj[0]["content"]["totalkrag"].toString();
+                                                console.log(speech);
+                                                });
+                                                }
+                                                http.request(options, callback).end();
+             
              
              
              
