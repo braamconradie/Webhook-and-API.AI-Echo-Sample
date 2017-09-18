@@ -128,7 +128,7 @@ restService.post('/echo', function(req, res) {
                                                 let location = response['data']['request'][0];
                                                 let conditions = response['data']['current_condition'][0];
                                                 let currentConditions = conditions['weatherDesc'][0]['value'];
-
+                                                 let speech = "wenner";
                                                 // Create response
                                                 let output = `Current conditions in the ${location['type']} 
                                                 ${location['query']} are ${currentConditions} with a projected high of
