@@ -47,7 +47,7 @@ restService.post('/echo', function(req, res) {
                       speech = tweedeobj[0]["content"]["totalkrag"].toString();
                       console.log(speech);
                   });
-           
+   */   
    
                                                              const http = require('http');
                                                 let options = {
@@ -71,7 +71,7 @@ restService.post('/echo', function(req, res) {
                                                 }
                                                 http.request(options, callback).end();
              
-*/             
+            
              
              
 
