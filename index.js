@@ -47,9 +47,9 @@ restService.post('/echo', function(req, res) {
                       speech = tweedeobj[0]["content"]["totalkrag"].toString();
                       console.log(speech);
                   });
-   */   
+      
    
-                                                             const http = require('http');
+                                                const http = require('http');
                                                 let options = {
                                                   host: 'dweet.io',
                                                   path: '/get/latest/dweet/for/braamwatts'
@@ -71,7 +71,7 @@ restService.post('/echo', function(req, res) {
                                                 }
                                                 http.request(options, callback).end();
              
-            
+            */
              
              
 
