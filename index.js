@@ -49,7 +49,7 @@ restService.post('/echo', function(req, res) {
                   });
 */           
    
-                                                             var http = require('http');
+                                                             const http = require('http');
                                                 var options = {
                                                   host: 'dweet.io',
                                                   path: '/get/latest/dweet/for/braamwatts'
