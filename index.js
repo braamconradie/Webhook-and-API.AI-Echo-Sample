@@ -87,8 +87,10 @@ restService.post('/echo', function(req, res) {
 
                                         exports.weatherWebhook = (req, res) => {
                                           // Get the city and date from the request
-                                          let city = req.body.result.parameters['geo-city']; // city is a required param
-
+                                          //let city = req.body.result.parameters['geo-city']; // city is a required param
+                                            
+                                            let city = 'Auckland'; // city is a required param
+                                            
                                           // Get the date for the weather forecast (if present)
                                           let date = '';
                                           if (req.body.result.parameters['date']) {
