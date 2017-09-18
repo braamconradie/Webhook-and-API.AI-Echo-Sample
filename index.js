@@ -50,7 +50,7 @@ restService.post('/echo', function(req, res) {
            
    
                                                              const http = require('http');
-                                                var options = {
+                                                let options = {
                                                   host: 'dweet.io',
                                                   path: '/get/latest/dweet/for/braamwatts'
                                                 };
@@ -63,7 +63,7 @@ restService.post('/echo', function(req, res) {
 
                                                 let myJSON = JSON.parse(str);
                                                 // console.log(myJSON);
-                                                  var tweedeobj = myJSON["with"];
+                                                  let tweedeobj = myJSON["with"];
                                                   //console.log(tweedeobj[0]["content"]["totalkrag"]);
                                                   let speech = tweedeobj[0]["content"]["totalkrag"].toString();
                                                 console.log(speech);
