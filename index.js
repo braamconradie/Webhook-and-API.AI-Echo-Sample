@@ -55,17 +55,17 @@ restService.post('/echo', function(req, res) {
                                                   path: '/get/latest/dweet/for/braamwatts'
                                                 };
                                                 callback = function(response) {
-                                                  var str = '';
+                                                  let str = '';
                                                   response.on('data', function (chunk) {
-                                                  str += chunk;
+                                                  let str += chunk;
                                                   });
                                                   response.on('end', function () {
 
-                                                var myJSON = JSON.parse(str);
+                                                let myJSON = JSON.parse(str);
                                                 // console.log(myJSON);
                                                   var tweedeobj = myJSON["with"];
                                                   //console.log(tweedeobj[0]["content"]["totalkrag"]);
-                                                  speech = tweedeobj[0]["content"]["totalkrag"].toString();
+                                                  let speech = tweedeobj[0]["content"]["totalkrag"].toString();
                                                 console.log(speech);
                                                 });
                                                 }
